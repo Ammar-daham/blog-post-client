@@ -7,8 +7,6 @@ import '../index.css'
 const CommentForm = ({ addComment }) => {
   const [comment, setComment] = useState()
 
-  console.log('comment: ', comment)
-
   const handleSubmit = (event) => {
     event.preventDefault()
     addComment(comment)
@@ -30,7 +28,7 @@ const CommentForm = ({ addComment }) => {
         />
       </FloatingLabel>
       <br />
-      <button type="submit">Add Comment</button>
+      <button type="submit">Comment</button>
     </Form>
   )
 }

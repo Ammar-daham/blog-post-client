@@ -38,12 +38,6 @@ const App = () => {
     dispatch(allBlogs())
   }, [updateTimestamp])
 
-  console.log('users: ', users)
-
-  console.log('blogs: ', blogs)
-
-  console.log('user: ', user)
-
   useEffect(() => {
     dispatch(sortByLikes())
   }, [blogs])

@@ -21,7 +21,7 @@ const NewBlog = ({ createBlog }) => {
       url: newBlog.url,
     })
     setNewBlog({ title: '', author: '', url: '' })
-    navigate('/users')
+    navigate('/')
   }
 
   return (
@@ -61,7 +61,7 @@ const NewBlog = ({ createBlog }) => {
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicAuthor">
           <Form.Label>Description</Form.Label>
-          <FloatingLabel controlId="floatingTextarea2" label="Comments">
+          <FloatingLabel controlId="floatingTextarea2">
             <Form.Control
               as="textarea"
               placeholder="Leave a comment here"

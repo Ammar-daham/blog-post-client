@@ -17,8 +17,14 @@ const Blogs = ({ blogs }) => {
             <Card className="item">
               <Link className="item_link" to={`/blogs/${blog.id}`}>
                 <div className="item_bg"></div>
-                <Card.Title className="item_title">{blog.title.toUpperCase()}</Card.Title>
+                <Card.Title className="item_title">
+                  {blog.title.toUpperCase()}
+                </Card.Title>
                 <Card.Text className="item-text">By {blog.author}</Card.Text>
+                <Card.Text className="item_date-box">
+                  Created:
+                  <span className="item_date"> {blog.date}</span>{' '}
+                </Card.Text>
                 <Card.Text className="item-text">
                   <a className="link" href={blog.url}>
                     Read more

@@ -63,7 +63,7 @@ const Menu = ({ user }) => {
               </Link>
             </Nav.Link>
             <p className="loggedIn">
-              {user.name} logged in
+              {user.name.toUpperCase()}
               <button id="logout-button" onClick={handleLogout}>
                 logout
               </button>

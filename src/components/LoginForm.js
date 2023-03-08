@@ -25,7 +25,6 @@ const LoginForm = ({ handleLogin }) => {
       const res = await handleLogin({ username, password })
       setUsername('')
       setPassword('')
-      console.log('res ', res)
       if (res === 'user/login/rejected') {
         navigate('/login')
       } else {

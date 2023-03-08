@@ -31,7 +31,6 @@ const SignupForm = ({ createUser }) => {
       const res = await createUser({ name, username, password })
       setUsername('')
       setPassword('')
-      console.log('res ', res)
       if (res === 'users/newUser/rejected') {
         navigate('/sign-up')
       } else {
