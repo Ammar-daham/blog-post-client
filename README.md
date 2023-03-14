@@ -65,4 +65,4 @@ You can check out a live demo of the app deployed on Fly.io at the following URL
 
 In this demo, you can sign up for a new account, log in with an existing one, create and delete blog posts, and like and comment on other users' posts. Note that the demo data is reset periodically, so any changes you make will not persist.
 
-Give it a try and let us know what you think!
+Give it a try and let me know what you think!
