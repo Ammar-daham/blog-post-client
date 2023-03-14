@@ -6,12 +6,15 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { useNavigate } from 'react-router-dom'
 
-
-
 import '../index.css'
 
 const NewBlog = ({ createBlog }) => {
-  const [newBlog, setNewBlog] = useState({ title: '', author: '', url: '' })
+  const [newBlog, setNewBlog] = useState({
+    title: '',
+    author: '',
+    url: '',
+    description: '',
+  })
   const navigate = useNavigate()
   const addNewBlog = (event) => {
     event.preventDefault()
@@ -19,8 +22,9 @@ const NewBlog = ({ createBlog }) => {
       title: newBlog.title,
       author: newBlog.author,
       url: newBlog.url,
+      description: newBlog.description,
     })
-    setNewBlog({ title: '', author: '', url: '' })
+    setNewBlog({ title: '', author: '', url: '', description: '' })
     navigate('/')
   }
 
@@ -66,13 +70,16 @@ const NewBlog = ({ createBlog }) => {
               as="textarea"
               placeholder="Leave a comment here"
               style={{ height: '100px' }}
+              value={newBlog.description}
+              onChange={({ target }) =>
+                setNewBlog({ ...newBlog, description: target.value })
+              }
             />
           </FloatingLabel>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicAuthor"></Form.Group>
         <Row>
-          <Col xs={8} sm={11}>
-          </Col>
+          <Col xs={8} sm={11}></Col>
           <Col xs={4} sm={1}>
             <button type="submit" id="create-button">
               Create

@@ -48,7 +48,7 @@ const Blog = ({ blogs, updatedBlog, deleteBlog, user, addComment }) => {
           <Card.Link className='link' href="">{blog.url}</Card.Link>
           <Card.Text className="item_date">{blog.date}</Card.Text>
           <Card.Text>Posted by {blog.user.name}</Card.Text>
-          <Card.Text>Description comes here</Card.Text>
+          <Card.Text>{blog.description}</Card.Text>
           <Card.Text>{blog.likes} likes</Card.Text>
           <Card.Text>Comments</Card.Text>
           <ul>
